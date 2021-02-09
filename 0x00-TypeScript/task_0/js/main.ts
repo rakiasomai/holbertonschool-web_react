@@ -20,19 +20,32 @@ const student_2: Student = {
 }
 
 const studentsList = [student_1, student_2]
+// let tab: string = ` <table>
+//<tr>
+ //   <th> firstName </th>
+ //   <th> location </th>
+//</tr>`
 
-let tab: string = ` <table>
-<tr>
-    <th> firstName </th>
-    <th> location </th>
-</tr>`
+//studentsList.forEach(stud => {
+//    tab += `<tr>
+  //    <td>${stud.firstName}</td>
+    //  <td>${stud.location}</td>
+    //</tr>`
+//});
 
-studentsList.forEach(stud => {
-    tab += `<tr>
-      <td>${stud.firstName}</td>
-      <td>${stud.location}</td>
-    </tr>`
-});
+//tab += '</table>';
+//document.write(tab);
 
-tab += '</table>';
-document.write(tab);
+const body = document.getElementsByTagName('body')[0];
+const table = document.createElement('table');
+
+studentsList.forEach((student) => {
+    const row = table.insertRow(0);
+    const cell1 = row.insertCell(0);
+    const cell2 = row.insertCell(1);
+
+    cell1.innerHTML = student.firstName;
+    cell2.innerHTML = student.location;
+})
+
+body.append(table);
