@@ -20,3 +20,19 @@ const student_2: Student = {
 }
 
 const studentsList = [student_1, student_2]
+
+let tab: string = ` <table>
+<tr>
+    <th> firstName </th>
+    <th> location </th>
+</tr>`
+
+studentsList.forEach(stud => {
+    tab += `<tr>
+      <td>${stud.firstName}</td>
+      <td>${stud.location}</td>
+    </tr>`
+});
+
+tab += '</table>';
+document.write(tab);
