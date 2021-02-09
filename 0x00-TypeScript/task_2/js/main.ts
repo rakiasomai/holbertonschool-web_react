@@ -16,7 +16,7 @@ export class Director implements DirectorInterface {
     }
 
     getCoffeeBreak(): string {
-    return "Cannot have a break"
+    return "Cannot have a break";
     }
 
     workDirectorTasks(): string {
