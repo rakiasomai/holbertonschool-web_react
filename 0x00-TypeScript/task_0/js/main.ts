@@ -19,7 +19,7 @@ const student_2: Student = {
     location: 'Ariana',
 }
 
-const studentsList = [student_1, student_2]
+const studentsList: Array<Student> = [student_1, student_2]
 
 const body: HTMLBodyElement = document.getElementsByTagName("body")[0];
 
