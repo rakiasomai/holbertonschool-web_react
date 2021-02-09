@@ -16,3 +16,7 @@ interface Teacher {
   //};
   
  // console.log(teacher3);
+
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
