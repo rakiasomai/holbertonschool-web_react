@@ -35,17 +35,3 @@ const studentsList = [student_1, student_2]
 
 //tab += '</table>';
 //document.write(tab);
-
-const body = document.getElementsByTagName('body')[0];
-const table = document.createElement('table');
-
-studentsList.forEach((student) => {
-    const row = table.insertRow(0);
-    const cell1 = row.insertCell(0);
-    const cell2 = row.insertCell(1);
-
-    cell1.innerHTML = student.firstName;
-    cell2.innerHTML = student.location;
-})
-
-body.append(table);
