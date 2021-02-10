@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.createEmployee = exports.Teacher = exports.Director = void 0;
+exports.teachClass = exports.executeWork = exports.isDirector = exports.createEmployee = exports.Teacher = exports.Director = void 0;
 var Director = /** @class */ (function () {
     function Director() {
     }
@@ -33,11 +33,33 @@ var Teacher = /** @class */ (function () {
 exports.Teacher = Teacher;
 function createEmployee(salary) {
     if (typeof salary === "number" && salary < 500)
-        return new Teacher();
+        return new Teacher;
     else
-        return new Director();
+        return new Director;
 }
 exports.createEmployee = createEmployee;
-console.log(createEmployee(200));
-console.log(createEmployee(1000));
-console.log(createEmployee("$500"));
+function isDirector(employee) {
+    return employee.workFromHome() === "Working from home";
+}
+exports.isDirector = isDirector;
+function executeWork(employee) {
+    var feedback;
+    if (isDirector(employee)) {
+        feedback = employee.workDirectorTasks();
+    }
+    else {
+        feedback = employee.workTeacherTasks();
+    }
+    console.log(feedback);
+    return feedback;
+}
+exports.executeWork = executeWork;
+function teachClass(todayClass) {
+    if (todayClass === "Math")
+        return "Teaching Math";
+    else
+        return "Teaching History";
+}
+exports.teachClass = teachClass;
+console.log(teachClass('Math'));
+console.log(teachClass('History'));

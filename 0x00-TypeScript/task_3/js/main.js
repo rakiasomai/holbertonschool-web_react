@@ -18,7 +18,7 @@ var row = {
 };
 var newRowID = CURD.insertRow(row);
 console.log(newRowID);
-var updatedRow = __assign(__assign({}, row), { age: 23 });
+var updatedRow = __assign(__assign({}, row), { 'age': 23 });
 CURD.updateRow(newRowID, updatedRow);
 console.log(updatedRow);
 CURD.deleteRow(newRowID);
