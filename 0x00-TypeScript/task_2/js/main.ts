@@ -44,16 +44,16 @@ export function isDirector(employee: Teacher | Director): employee is Director {
 }
 
 export function executeWork(employee: Director | Teacher): string {
-    var feedback;
+    let msg;
   
     if (isDirector(employee)) {
-      feedback = employee.workDirectorTasks();
+      msg = employee.workDirectorTasks();
     } else {
-      feedback = employee.workTeacherTasks();
+      msg = employee.workTeacherTasks();
     }
   
-    console.log(feedback);
-    return feedback;
+    console.log(msg);
+    return msg;
   }
 
 type Subjects = 'Math' | 'History';
