@@ -46,7 +46,7 @@ export class StudentClass implements StudentClassInterface {
     firstName: string;
     lastName: string;
     
-    StudentConstructor(firstName: string, lastName: string) {
+    constructor (firstName: string, lastName: string) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
