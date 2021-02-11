@@ -32,14 +32,14 @@ export const printTeacher: printTeacherFunction = function (
     const intial: string = firstName.charAt(0);
     return `${intial}. ${lastName}`;
 };
+  
+interface StudentConstructor {
+    new(firstName: string, lastName: string): StudentClassInterface;
+}
 
 interface StudentClassInterface {
     workOnHomework(): string;
     displayName(): string;
-}
-  
-interface StudentConstructor {
-    new(firstName: string, lastName: string): StudentClassInterface;
 }
 
 export class StudentClass implements StudentClassInterface {
