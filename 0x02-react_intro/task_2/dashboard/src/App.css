@@ -35,8 +35,9 @@ div {
   color: var(--holberton-red);
 }
 
-.App-body p {
+.App-body {
   margin: 48px 0 0 32px;
+  text-align: left;
   font-size: 16px;
 }
 
@@ -53,4 +54,9 @@ div {
   padding: 16px 0;
   font-size: 16px;
   font-style: italic;
+}
+button {
+  margin-left: 10px;
+  height: 20px;
+  
 }
