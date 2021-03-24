@@ -12,12 +12,12 @@ function App() {
         <h1> School dashbord </h1>  
         </header>
       </div>
-
+      <body>
       <div className="App-body">
-        <body>
+        
         <p> Login to access the full dashbord </p>
-        </body>
       </div>
+      </body>
 
       <div className="App-footer">
         <footer>
