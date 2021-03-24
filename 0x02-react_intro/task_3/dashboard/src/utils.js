@@ -11,5 +11,5 @@ export const getFooterCopy = (isIndex) => {
 }
 
 export const getLatesNotification = () => {
-    return " <strong>Urgent requirement </strong> - complete by EOD "
+    return "<strong>Urgent requirement</strong> - complete by EOD"
 }

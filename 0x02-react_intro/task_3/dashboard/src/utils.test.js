@@ -1,4 +1,4 @@
-import { getFullYear,getFooterCopy, getLatestNotification} from "./utils";
+import { getFullYear,getFooterCopy, getLatesNotification} from "./utils";
 
 it("should return the current year", () => {
     expect(getFullYear()).toBe(2021);
@@ -13,5 +13,5 @@ it("should return the correct string when the argument is false", () => {
 });
 
 it("should return the right string for the function getLatesNotifications", () => {
-    expect(getLatestNotification()).toBe("<strong>Urgent requirement</strong> - complete by EOD");
+    expect(getLatesNotification()).toBe("<strong>Urgent requirement</strong> - complete by EOD");
 });
