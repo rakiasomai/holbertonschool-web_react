@@ -1,6 +1,6 @@
 {
   "homepage": "https://rakiasomai.github.io/holbertonschool-web_react",
-  "name": "dashbord",
+  "name": "dashboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
