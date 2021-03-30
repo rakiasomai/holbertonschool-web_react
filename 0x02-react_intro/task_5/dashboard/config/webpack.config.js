@@ -21,25 +21,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      title: 'Holberton Dashboard',
       template: './dist/index.html',
-      templateContent: ({ HtmlWebpackPlugin }) => `
-      <!DOCTYPE html>
-      <html lang="en">
-        <head>
-          <meta charset="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <!-- <link rel="icon" type="image/png" href="favicon.ico" /> -->
-          <script defer src="./bundle.js"></script>
-          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-          <title>Holberton Dashboard</title>
-        </head>
-        <body>
-          <div id="root-notifications"></div>
-          <div id="root"></div>
-        </body>
-      </html>
-      `
+      title: 'Holberton Dashboard',
     }),
   ],
   module: {
