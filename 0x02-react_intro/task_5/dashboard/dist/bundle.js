@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("console.log(\"hello WebPack\")\n\n//# sourceURL=webpack://dashboard/./src/index.js?");
+eval("throw new Error(\"Module parse failed: Unexpected token (7:2)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n| \\n| ReactDOM.render(\\n>   <React.StrictMode>\\n|     <App />\\n|   </React.StrictMode>,\");\n\n//# sourceURL=webpack://dashboard/./src/index.js?");
 
 /***/ })
 
@@ -24,7 +24,7 @@ eval("console.log(\"hello WebPack\")\n\n//# sourceURL=webpack://dashboard/./src/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
 /******/ 	var __webpack_exports__ = {};
 /******/ 	__webpack_modules__["./src/index.js"]();
 /******/ 	
