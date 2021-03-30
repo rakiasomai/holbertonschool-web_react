@@ -1,3 +1,8 @@
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+
 import { getFullYear,getFooterCopy, getLatesNotification} from "./utils";
 
 it("should return the current year", () => {
