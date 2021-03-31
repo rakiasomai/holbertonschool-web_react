@@ -1,0 +1,13 @@
+.Notifications {
+    border: 2px solid var(--holberton-red);
+    padding: 10px;
+    border-style: dashed;
+}
+
+li[data-notification-type="default"] {
+    color: blue;
+}
+
+li[data-notification-type="urgent"] {
+    color: var(--holberton-red);
+}
