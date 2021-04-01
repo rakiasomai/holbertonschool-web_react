@@ -1,0 +1,22 @@
+:root {
+  --holberton-red: #e1484c;
+}
+
+
+
+div {
+  padding: 2px 8px;
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+  font-family: Roboto, sans-serif;
+}
+
+
+button {
+  margin-left: 10px;
+  height: 20px;
+  
+}
