@@ -1,0 +1,24 @@
+:root {
+    --holberton-red: #e1484c;
+  }
+
+.Notifications {
+    border: 2px solid var(--holberton-red);
+    padding: 10px;
+    border-style: dashed;
+    text-align: left;
+}
+
+li[data-notification-type="default"] {
+    color: blue;
+}
+
+li[data-notification-type="urgent"] {
+    color: var(--holberton-red);
+}
+
+.menuItem {
+    text-align: right;
+    margin-bottom: 10px;
+    font-family: none;
+}
