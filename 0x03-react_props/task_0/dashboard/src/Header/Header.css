@@ -2,16 +2,22 @@
   --holberton-red: #e1484c;
 }
 
+.App-header {
+  display: flex;
+  flex-direction: row;
+}
+
 .App-header header {
     display: flex;
     flex-direction: row;
     justify-content: left;
+    align-items: center;
     border-bottom: 3px solid var(--holberton-red);
   }
   
-  .App-header header img {
-    width: 200px;
-    height: 200px;
+  .App-header .App-logo {
+    
+    height: 250px;
   
   }
   

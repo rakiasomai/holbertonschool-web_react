@@ -2,10 +2,7 @@
   --holberton-red: #e1484c;
 }
 
-body {
-  max-width: 90%;
-  margin: 0 auto;
-}
+
 
 div {
   padding: 2px 8px;
@@ -17,44 +14,7 @@ div {
   font-family: Roboto, sans-serif;
 }
 
-.App-header header {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  border-bottom: 3px solid var(--holberton-red);
-}
 
-.App-header header img {
-  width: 200px;
-  height: 200px;
-
-}
-
-.App-header h1 {
-  margin: auto auto auto 0;
-  color: var(--holberton-red);
-}
-
-.App-body {
-  margin: 48px 0 0 32px;
-  text-align: left;
-  font-size: 16px;
-}
-
-
-.App-footer {
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.App-footer p {
-  border-top: 3px solid var(--holberton-red);
-  padding: 16px 0;
-  font-size: 16px;
-  font-style: italic;
-}
 button {
   margin-left: 10px;
   height: 20px;

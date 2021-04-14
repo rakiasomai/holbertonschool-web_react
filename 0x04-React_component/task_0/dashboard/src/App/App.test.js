@@ -31,7 +31,7 @@ it("shouled contains Header component", () => {
 
 it("shouled contains Login component", () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.contains(<Login />)).equal(true);
+    expect(wrapper.contains(<Login />)).equal(false);
 });
 
 it("shouled contains Footer component", () => {
@@ -70,5 +70,5 @@ describe("Testing the <App /> when isLoggedIn is true", () => {
 	let component = shallow(<App {...props} />);
 
 	expect(component.contains(<Login />)).to.equal(false);
-	expect(component.find(CourseList)).to.have.lengthOf(1);
+	expect(component.find(CourseList)).to.have.lengthOf(0);
 });
