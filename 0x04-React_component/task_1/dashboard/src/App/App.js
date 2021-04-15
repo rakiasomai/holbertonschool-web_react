@@ -13,7 +13,23 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.handleKeypress = this.handleKeypress.bind(this);
   }
+  handleKeypress(e) {
+    if(e.specKey === 'h' && e.ctrlKey) {
+      e.preventDefault();
+      alert('Logging you out');
+      this.props.logOut();
+    }
+  };
+
+  componentDidMount() {
+    document.addEventListener("Keydown", this.handleKeypress);
+  }
+  
+  componentWillUnmount() {
+    document.removeEventListener("Keydown", this.handleKeypress);
+  };
 
   render() {
     const listCourses = [
