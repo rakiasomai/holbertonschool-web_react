@@ -16,7 +16,7 @@ class App extends React.Component {
     this.handleKeypress = this.handleKeypress.bind(this);
   }
   handleKeypress(e) {
-    if(e.specKey === 'h' && e.ctrlKey) {
+    if(e.specKey === 72 && e.ctrlKey === 17) {
       e.preventDefault();
       alert('Logging you out');
       this.props.logOut();
@@ -24,11 +24,11 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    document.addEventListener("Keydown", this.handleKeypress);
+    window.addEventListener("Keydown", this.handleKeypress);
   }
   
   componentWillUnmount() {
-    document.removeEventListener("Keydown", this.handleKeypress);
+    window.removeEventListener("Keydown", this.handleKeypress);
   };
 
   render() {

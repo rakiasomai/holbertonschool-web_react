@@ -72,3 +72,23 @@ describe("Testing the <App /> when isLoggedIn is true", () => {
 	expect(component.contains(<Login />)).to.equal(false);
 	expect(component.find(CourseList)).to.have.lengthOf(1);
 });
+
+test('if logged in, course list is displayed and login form is NOT', () => {
+    const wrapper = shallow(<App isLoggedIn={true} />);
+
+    const login = wrapper.find(Login);
+    const courseList = wrapper.find(CourseList);
+
+    expect(login).to.have.lengthOf(0);
+    expect(courseList).to.have.lengthOf(1);
+  });
+  test('logOut alerts with correct string', () => {
+    const myLogOut = jest.fn(() => undefined);
+    const myAlert = jest.spyOn(global, 'alert');
+
+    const wrapper = shallow(<App logOut={myLogOut} />)
+
+    expect(myAlert);
+    expect(myLogOut);
+    jest.restoreAllMocks();
+  });
