@@ -7,7 +7,8 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import CourseList from '../CourseList/CourseList';
 import { getLatesNotification } from '../utils/utils';
-/* import BodySection from '../BodySection/BodySection' */
+import BodySection from '../BodySection/BodySection';
+import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
 
 
 class App extends React.Component {
@@ -76,10 +77,20 @@ class App extends React.Component {
           <Header />
           </div>
           <div>
-            {this.props.isLoggedIn === false && <Login />}
-            {this.props.isLoggedIn === true && <CourseList listCourses={listCourses} />}
+            {this.props.isLoggedIn === false &&
+            <BodySectionWithMarginBottom title="Log in to continue">
+              <Login />
+            </BodySectionWithMarginBottom>
+            }
+            {this.props.isLoggedIn === true &&
+            <BodySectionWithMarginBottom title="Course list">
+              <CourseList listCourses={listCourses} />
+            </BodySectionWithMarginBottom>
+            }
+            <BodySection title="News from the School">
+              <p> this is a Holberton School task </p>
+            </BodySection>
           </div>
-          {/* <BodySection /> */}
           <Footer />
         </div>
       </Fragment>

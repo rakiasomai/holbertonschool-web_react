@@ -37,7 +37,7 @@ class Notifications extends React.Component {
                         html={notifi.html}
                         type={notifi.type}
                         value={notifi.value}
-                        markAsRead={notifi.markAsRead}
+                        markAsRead={this.markAsRead}
                         />
                     )
                 })}

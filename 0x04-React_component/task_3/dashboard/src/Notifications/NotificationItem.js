@@ -1,23 +1,23 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
+class NotificationItem extends Component {
+  render() {
+    const { id, type, value, html, markAsRead } = this.props;
 
-const NotificationItem = ({html, type, value, markAsRead}) => {
     if (html === undefined)
-        return (
-            <li data-notification-type={type} onClick={() => markAsRead(id) }>
-                {value}
-            </li>
-    );
+      return (
+        <li data-notification-type={type} onClick={() => markAsRead(id)}>
+          {value}
+        </li>
+      );
     else
-        return (
-            <Fragment>
-            <li dangerouslySetInnerHTML={html} data-notification-type={type} >
-                {value}
-            </li>
-            </Fragment>
-        );
-    };
+      return (
+        <li data-notification-type={type} dangerouslySetInnerHTML={html}></li>
+      );
+  }
+}
+
 
 NotificationItem.propTypes = {
     id: PropTypes.number,
