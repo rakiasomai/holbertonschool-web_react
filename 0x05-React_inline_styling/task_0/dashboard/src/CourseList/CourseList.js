@@ -5,7 +5,7 @@ import CourseShape from './CourseShape';
 import PropTypes from 'prop-types';
 
 const CourseList = ({listCourses}) => {
-    if (listCourses.length == 0) {
+    if (!listCourses) {
         return <div> No course availble yet </div>
     } else 
         return (
