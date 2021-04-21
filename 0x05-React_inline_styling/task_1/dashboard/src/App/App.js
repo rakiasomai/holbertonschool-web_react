@@ -76,10 +76,10 @@ class App extends React.Component {
         <Notifications listNotifications={listNotifications} />
           <Header />
           </div>
-          <div>
+          <div className={css(styles.text)}>
             {this.props.isLoggedIn === false &&
             <BodySectionWithMarginBottom title="Log in to continue">
-              <Login />
+              <Login isLoggedIn={this.props.isLoggedIn} />
             </BodySectionWithMarginBottom>
             }
             {this.props.isLoggedIn === true &&
@@ -109,6 +109,8 @@ App.defaultProps = {
 
 const styles = StyleSheet.create({
   app: {
+    position: 'relative',
+    fontFamily: 'Roboto, sans-serif',
     minHeight: '100vh',
     position: 'relative'
   },
@@ -116,7 +118,12 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row-reverse',
     justifyContent: 'space-between',
-    borderBottom: '4px solid #e0003c'
+    borderBottom: '7px solid #e0003c'
+  },
+  
+  text: {
+    padding: '2px 8px',
+    textAlign: 'center'
   }
 });
 

@@ -1,0 +1,11 @@
+:root {
+    --holberton-red: #e1484c;
+  }
+
+li[data-notification-type="default"] {
+    color: blue;
+}
+
+li[data-notification-type="urgent"] {
+    color: var(--holberton-red);
+}

@@ -90,7 +90,7 @@ Notifications.defaultProps = {
 
 const styles = StyleSheet.create({
     notifications: {
-        border: 'px solid var(--holberton-red)',
+        border: 'px solid  #e1484c',
         padding: '10px',
         borderStyle: 'dashed',
         textAlign: 'left'

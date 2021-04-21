@@ -5,7 +5,7 @@ import { StyleSheet, css} from 'aphrodite';
 const Header = () => { 
     return (
         <div className={css(styles.appHeader)}>
-        <img src={logo} alt="logo"/>
+        <img className={css(styles.appLogo)} src={logo} alt="logo"/>
         <h1 className={css(styles.appH1)}> School dashbord </h1>
       </div>
     )
@@ -16,14 +16,17 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'left',
-    borderBottom: '3px solid var(--holberton-red)'
+    alignItem: 'center',
+  },
+
+  appLogo: {
+    height: '150px',
   },
 
   appH1: {
     margin: 'auto auto auto 0',
-    color: `var(--holberton-red)`,
+    color: '#e1484c',
   }
-
 });
 
 export default Header;
