@@ -88,7 +88,7 @@ Notifications.defaultProps = {
     listNotifications: [],
 };
 
-const opacityFrame = {
+const opacity = {
 	'0%': {
 		opacity: .5,
 	},
@@ -100,7 +100,7 @@ const opacityFrame = {
 	},
 };
 
-const bounceFrame = {
+const bounce = {
 	'0%': {
 		transform: 'translateY(0)',
 	},
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
 		pointer: 'cursor',
 		background: '#fff8f8',
 		':hover': {
-			animationName: [opacityFrame, bounceFrame],
+			animationName: [opacity, bounce],
 			animationDuration: '1s, .5s',
 			animationIterationCount: '3',
 		}
