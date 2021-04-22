@@ -40,7 +40,7 @@ it("shouled contains Header component", () => {
 
 it("shouled contains Login component", () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.contains(<Login />)).equal(true);
+    expect(wrapper.contains(<Login />)).equal(false);
 });
 
 it("shouled contains Footer component", () => {
