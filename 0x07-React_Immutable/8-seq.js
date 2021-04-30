@@ -1,20 +1,20 @@
 import { Seq } from 'immutable';
 
-const { Seq } = immutable;
+function capitalLetter(string) {
+  return string.trim().replace(/^\w/, (c) => c.toUpperCase());
+}
 
-const makeUppercase = (str) => str.charAt(0).toUpperCase() + str.slice(1);
-
-export default function printBestStudents(grades) {
-  const b_std = Seq(grades)
-    .filter((std) => std.score > 70)
-    .map((std) => {
-      const { firstName, lastName } = std;
+export default function printBestStudents(object) {
+  const bestS = Seq(object);
+  console.log(bestS
+    .filter((student) => student.score > 70)
+    .map((student) => {
+      const { firstName, lastName } = student;
       return {
-        ...std,
-        firstName: makeUppercase(firstName),
-        lastName: makeUppercase(lastName),
+        ...student,
+        firstName: capitalLetter(firstName),
+        lastName: capitalLetter(lastName),
       };
-    });
-
-  b_std.forEach((std) => console.log(std));
+    })
+    .toJS());
 }
