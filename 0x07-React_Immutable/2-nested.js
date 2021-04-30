@@ -1,14 +1,7 @@
-import { Map } from 'immutable';
+import { fromJS } from 'immutable';
 
-export const map = Map({
-  1: 'Liam',
-  2: 'Noah',
-  3: 'Elijah',
-  4: 'Oliver',
-  5: 'Jacob',
-  6: 'Lucas',
-});
+export default function accessImmutableObject(object, array) {
+  const val = fromJS(object);
 
-export const map2 = map.withMutations((item) => {
-  item.set(2, 'Benjamin').set(4, 'Oliver');
-});
+  return val.getIn(array, undefined);
+}
