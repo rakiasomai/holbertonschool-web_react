@@ -101,3 +101,19 @@ test('if logged in, course list is displayed and login form is NOT', () => {
     expect(myLogOut);
     jest.restoreAllMocks();
   });
+
+  test('defaults to false', () => {
+    const wrapper = shallow(<App />);
+
+    expect(wrapper.state()).to.have.property('displayDrawer', false);
+  });
+
+  test('handleDisplayDrawer and handleHideDrawer work as expected', () => {
+    const wrapper = shallow(<App />);
+
+    wrapper.instance().handleDisplayDrawer();
+    expect(wrapper.state()).to.have.property('displayDrawer', true);
+
+    wrapper.instance().handleHideDrawer();
+    expect(wrapper.state()).to.have.property('displayDrawer', false);
+  });
