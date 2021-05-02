@@ -28,11 +28,11 @@ class App extends React.Component {
   };
 
   handleDisplayDrawer() {
-    this.setState({ displayDrawer: true});
+    this.setState({ displayDrawer: true });
   }
 
   handleHideDrawer() {
-    this.setState({ displayDrawer: false});
+    this.setState({ displayDrawer: false });
   }
 
   componentDidMount() {
@@ -44,6 +44,8 @@ class App extends React.Component {
   };
 
   render() {
+    const { isLoggedIn } = this.props;
+    const { displayDrawer } = this.state;
     const listCourses = [
       {
         id: 1,
